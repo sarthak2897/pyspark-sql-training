@@ -58,3 +58,5 @@ averageDf = filterCorruptDf.groupby("schemeCode",month("date").alias("month")).a
 
 nonZeroSchemeCode = filterCorruptDf.select(col("schemeCode")).where(~(col("exitLoad") == 0.0))
 
+nonZeroSchemeCode.show()
+
